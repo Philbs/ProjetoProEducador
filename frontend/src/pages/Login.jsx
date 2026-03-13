@@ -48,8 +48,9 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-300 ml-1">Email Address</label>
+            <label htmlFor="login-email" className="text-sm font-medium text-gray-300 ml-1">Email Address</label>
             <input
+              id="login-email"
               type="email"
               required
               value={email}
@@ -60,8 +61,9 @@ export default function Login() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-300 ml-1">Password</label>
+            <label htmlFor="login-password" className="text-sm font-medium text-gray-300 ml-1">Password</label>
             <input
+              id="login-password"
               type="password"
               required
               value={password}
@@ -74,7 +76,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-[var(--color-neon)] to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white font-semibold py-3 px-4 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed group"
+            className="w-full bg-gradient-to-r from-[var(--color-neon)] to-teal-500 hover:from-teal-500 hover:to-teal-400 text-white font-semibold py-3 px-4 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed group"
           >
             {loading ? 'Authenticating...' : (
               <>
@@ -87,7 +89,7 @@ export default function Login() {
 
         <p className="mt-8 text-center text-sm text-[var(--color-text-muted)]">
           Don't have an account?{' '}
-          <Link to="/register" className="text-[var(--color-neon)] hover:text-purple-400 font-medium transition-colors">
+          <Link to="/register" className="text-[var(--color-neon)] hover:text-teal-400 font-medium transition-colors">
             Create an account
           </Link>
         </p>

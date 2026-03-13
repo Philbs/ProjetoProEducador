@@ -53,7 +53,7 @@ export default function Dashboard() {
   const chartData = [
     { name: 'Completed', value: completed, color: '#10b981' }, // Emerald
     { name: 'In Progress', value: inProgress, color: '#3b82f6' }, // Blue
-    { name: 'Pending', value: pending, color: '#8b5cf6' }, // Purple
+    { name: 'Pending', value: pending, color: '#14b8a6' }, // Teal
     { name: 'Overdue', value: overdue, color: '#ef4444' }, // Red
   ];
 
@@ -96,7 +96,7 @@ export default function Dashboard() {
           
           <button 
             onClick={() => { setEditingTask(null); setIsModalOpen(true); }}
-            className="bg-[var(--color-neon)] hover:bg-purple-500 text-white font-medium py-2.5 px-5 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
+            className="bg-[var(--color-neon)] hover:bg-teal-500 text-white font-medium py-2.5 px-5 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
           >
             <Plus className="w-5 h-5" />
             New Task
@@ -120,7 +120,7 @@ export default function Dashboard() {
           <MetricCard 
             title="In Progress" 
             value={inProgress} 
-            icon={<Clock className="w-6 h-6 text-purple-400" />} 
+            icon={<Clock className="w-6 h-6 text-teal-400" />} 
             trend="Keep going"
           />
           <MetricCard 
